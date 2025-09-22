@@ -1,0 +1,140 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body: center calculator */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, black, #434343);
+    padding: 20px;
+}
+
+/* Calculator container */
+.calculator {
+    /* width: 100%; */
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 10px 10px 20px rgba(113, 115, 119, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input */
+.calculator input {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: right;
+    color: #ffffff;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1);
+}
+
+.calculator input::placeholder {
+    color: #ffffff;
+}
+
+/* Buttons grid */
+.calculator div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgb(228, 228, 129);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.operator {
+    color: #4df04d;
+}
+
+.equalBtn {
+    background-color: #fb7c14;
+    color: white;
+}
+
+/* Responsive: tablets */
+@media (max-width: 768px) {
+    .calculator input {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive: small mobiles */
+@media (max-width: 480px) {
+    .calculator {
+        /* max-width: 100%; */
+        padding: 15px;
+    }
+
+    .calculator input {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .calculator input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Ultra-small devices */
+@media (max-width: 320px) {
+    .calculator input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px;
+        font-size: 0.7rem;
+    }
+}
